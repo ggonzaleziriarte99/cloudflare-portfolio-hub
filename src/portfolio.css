@@ -94,6 +94,13 @@
 }
 
 /* --- Overrides: Light Mode Premium Coherence --- */
+[data-theme="light"] .header-premium {
+    background: rgba(248, 250, 252, 0.7);
+}
+[data-theme="light"] .header-premium.is-scrolled {
+    background: rgba(248, 250, 252, 0.95);
+    box-shadow: 0 4px 30px rgba(30, 88, 120, 0.1);
+}
 /* Fin Overrides Modo Claro */
 
 /* Reset & Global */
@@ -154,6 +161,17 @@ body {
 .header-premium {
     position: fixed; top: 0; width: 100%; z-index: 1000;
     padding: 1.5rem 0; transition: var(--transition);
+    background: rgba(5, 10, 16, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+}
+
+.header-premium.is-scrolled {
+    background: rgba(5, 10, 16, 0.95);
+    border-bottom-color: var(--border-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    padding: 1rem 0;
 }
 
 nav { display: flex; justify-content: space-between; align-items: center; }
