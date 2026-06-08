@@ -94,6 +94,13 @@
 }
 
 /* --- Overrides: Light Mode Premium Coherence --- */
+[data-theme="light"] .header-premium {
+    background: rgba(248, 250, 252, 0.7);
+}
+[data-theme="light"] .header-premium.is-scrolled {
+    background: rgba(248, 250, 252, 0.95);
+    box-shadow: 0 4px 30px rgba(30, 88, 120, 0.1);
+}
 /* Fin Overrides Modo Claro */
 
 /* Reset & Global */
