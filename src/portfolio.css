@@ -639,6 +639,56 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     line-height: 1.6;
 }
 
+/* --- Perfil Profesional Enhancement --- */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.profile-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.stat-mini-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.stat-mini-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-premium);
+}
+
+.stat-mini-card i {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.stat-mini-card h4 {
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    letter-spacing: -0.5px;
+}
+
+.stat-mini-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
 /* ==========================================================================
    RESPONSIVE DESIGN SYSTEM (BREAKPOINTS)
    ========================================================================== */
@@ -722,132 +772,41 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     .featured-mini-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* MOBILE LARGE (480px - 767px) */
+/* MOBILE LARGE (480px - 767px) — Solo layout/grid + header + overlays */
 @media (max-width: 767px) {
-    /* Secciones - Más compacto */
-    .section { padding: 40px 0; }
-    .section-title { margin-bottom: 2rem; font-size: clamp(1.6rem, 5vw, 2rem); }
-
-    /* Hero - Compacto y accessible */
-    .hero { min-height: auto; padding: 70px 0 20px; }
-    .hero h1 { font-size: 1.9rem; line-height: 1.15; }
-    .hero-badge { margin-bottom: 0.8rem; }
-    .lead { font-size: 1rem; margin-bottom: 1.5rem; }
-    .hero-btns { flex-direction: column; width: 100%; gap: 0.8rem; margin-bottom: 2rem; }
-    .btn-primary { width: 100%; text-align: center; padding: 0.9rem 1.5rem; }
-    .btn-secondary { display: inline-block; padding: 0.4rem 0; }
-
-    /* Foto de perfil más pequeña */
-    .profile-photo { height: 300px; }
-    .photo-card { max-width: 280px; }
-    .photo-info-badge { padding: 8px 14px; font-size: 0.8rem; }
-
-    /* Trust icons */
-    .hero-trust { padding-top: 1.5rem; }
-    .trust-icons { gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-    .trust-item { font-size: 0.85rem; }
-
-    /* Bento Grid - Cards compactas */
-    .bento-grid { grid-template-columns: 1fr; gap: 1rem; }
-    .bento-item { padding: 1.5rem; }
+    /* Grid: una columna */
+    .bento-grid { grid-template-columns: 1fr; }
     .bento-item.wide { grid-column: span 1; }
     .bento-item.tall { grid-row: span 1; }
-    .bento-content i { font-size: 1.8rem; margin-bottom: 1rem; }
-    .bento-content h3 { font-size: 1.2rem; margin-bottom: 0.8rem; }
-    .bento-content p { font-size: 0.9rem; }
-    .bento-tag { bottom: 1.2rem; right: 1.5rem; font-size: 0.65rem; }
+    .projects-grid-modern { grid-template-columns: 1fr; }
+    .featured-mini-grid { grid-template-columns: 1fr; }
+    .skill-grid { grid-template-columns: 1fr; }
 
-    /* Projects */
-    .projects-grid-modern { grid-template-columns: 1fr; gap: 1.5rem; }
-    .project-info { padding: 1.5rem; }
-    .project-info h3 { font-size: 1.2rem; }
-    .project-tech { gap: 0.4rem; margin-bottom: 1.5rem; }
-    .project-tech span { font-size: 0.65rem; padding: 3px 10px; }
-    .project-links { gap: 1rem; padding-top: 1rem; }
+    /* Featured: columna */
+    .featured-industrial-footer { flex-direction: column; align-items: flex-start; }
 
-    /* Featured Industrial Card */
-    .featured-industrial-card { margin-bottom: 2rem; }
-    .featured-industrial-content { padding: 1.5rem; }
-    .featured-industrial-content h3 { font-size: 1.5rem; }
-    .featured-description { font-size: 1rem; margin-bottom: 2rem; }
-    .featured-mini-grid { grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2rem; }
-    .mini-card { padding: 1.2rem; }
-    .mini-label { font-size: 0.65rem; margin-bottom: 0.4rem; }
-    .mini-value { font-size: 0.85rem; }
-    .featured-industrial-footer { flex-direction: column; align-items: flex-start; gap: 1rem; }
-    .status-note { font-size: 0.8rem; }
-
-    /* Profile */
-    .profile-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .profile-narrative p { font-size: 0.95rem; }
-    .profile-stats { flex-direction: row; gap: 1rem; overflow-x: auto; }
-    .stat-mini-card { padding: 1rem; min-width: 0; flex: 1; }
-    .stat-mini-card i { font-size: 1.3rem; }
-    .stat-mini-card h4 { font-size: 0.9rem; }
-    .stat-mini-card p { font-size: 0.8rem; }
-
-    /* Timeline */
-    .timeline-container { padding-left: 1.5rem; }
-    #experiencia .timeline-item-premium { padding: 1.2rem; margin-bottom: 1.5rem; }
-    #experiencia .timeline-item-premium h4 { font-size: 1.1rem; }
-    #experiencia .description { font-size: 0.9rem; }
-
-    /* Skills */
-    .skill-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-    .skill-cluster { padding: 1.5rem; }
-    .skill-cluster h4 { font-size: 1rem; margin-bottom: 1.2rem; padding-bottom: 0.8rem; }
-    .skill-tags { gap: 0.6rem; }
-    .skill-tags span { font-size: 0.8rem; padding: 5px 10px; }
-
-    /* Education */
-    #trayectoria .education-stack { gap: 1rem; }
-    .edu-card-mini { flex-direction: column; text-align: center; padding: 1.2rem; gap: 1rem; }
+    /* Education: columna centrada */
+    .edu-card-mini { flex-direction: column; text-align: center; }
     .edu-card-mini i { margin-bottom: 0; }
-    .edu-card-mini h5 { font-size: 1rem; }
-    .edu-card-mini p { font-size: 0.85rem; }
 
-    /* Contact */
-    .contact-card-premium { padding: 2rem 1.2rem; }
-    .contact-header h2 { font-size: 1.6rem; margin-bottom: 1rem; }
-    .contact-header p { font-size: 0.95rem; margin-bottom: 2rem; }
-    .contact-socials { gap: 1rem; padding-top: 1.5rem; flex-direction: column; align-items: center; }
-    .contact-socials a { font-size: 0.85rem; padding: 0.8rem 1.5rem; width: 100%; max-width: 280px; justify-content: center; }
+    /* Contact: columna centrada */
+    .contact-socials { flex-direction: column; align-items: center; }
+    .contact-socials a { width: 100%; max-width: 280px; justify-content: center; }
 
     /* Header mobile */
     .nav-links { width: min(280px, 85%); padding: 100px 1.5rem; }
     .nav-links a { font-size: 1rem; padding: 12px 0; }
 
-    /* Ocultar efectos pesados para mejor rendimiento */
+    /* Ocultar efectos pesados */
     .glow-overlay { display: none; }
     .data-grid-overlay { display: none; }
-
-    /* Footer */
-    footer { padding: 1.5rem 0; font-size: 0.8rem; }
-
-    /* Back to top más compacto */
-    .whatsapp-btn { width: 48px; height: 48px; bottom: 20px; right: 20px; font-size: 1.5rem; }
 }
 
-/* MOBILE SMALL (320px - 479px) */
+/* MOBILE SMALL (320px - 479px) — Solo layout + container */
 @media (max-width: 479px) {
-    .hero h1 { font-size: 1.8rem; }
-    .lead { font-size: 0.9rem; }
-    .section-title { font-size: 1.5rem; }
-    .hero-badge { font-size: 0.65rem; padding: 4px 10px; letter-spacing: 0.5px; text-align: center; max-width: 100%; word-wrap: break-word; }
     .container { padding: 0 1rem; }
-    .profile-photo { height: 260px; }
-    .photo-card { max-width: 240px; }
-    .photo-info-badge { right: 8px; bottom: 8px; padding: 6px 10px; font-size: 0.75rem; }
-    .trust-icons { gap: 1rem; }
-    .trust-item { font-size: 0.8rem; gap: 0.4rem; }
-    .featured-industrial-content h3 { font-size: 1.3rem; }
-    .bento-content h3 { font-size: 1.1rem; }
-    .project-info h3 { font-size: 1.1rem; }
-    .contact-header h2 { font-size: 1.4rem; }
     #experiencia .time { font-size: 0.7rem; }
     #experiencia .company { font-size: 0.9rem; }
-    .skill-tags span { font-size: 0.75rem; }
-    .project-links a { font-size: 0.8rem; }
 
     /* Asegurar que términos técnicos largos no rompan el layout */
     .section-title, .hero h1, .featured-industrial-content h3 {
@@ -881,55 +840,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     outline-offset: 2px;
 }
 
-/* --- Perfil Profesional Enhancement --- */
-.profile-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.profile-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.stat-mini-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 1.5rem;
-    transition: var(--transition);
-    backdrop-filter: blur(10px);
-    position: relative;
-}
-
-.stat-mini-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--primary);
-    box-shadow: var(--shadow-premium);
-}
-
-.stat-mini-card i {
-    color: var(--primary);
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.stat-mini-card h4 {
-    color: var(--text-main);
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    letter-spacing: -0.5px;
-}
-
-.stat-mini-card p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
+/* (Perfil movido antes de media queries — ver bloque pre-responsive) */
 /* --- Consolidación de Espaciado Vertical y Excepciones --- */
 #proyectos { padding-bottom: 120px; }
 #experiencia { padding-top: 120px; }
@@ -1112,9 +1023,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 }
 
 @media (max-width: 767px) {
-    #experiencia .timeline-container { padding-left: 1.5rem; margin-left: 0; }
     #experiencia .timeline-item-premium::before { left: calc(-1.5rem - 8px); width: 14px; height: 14px; }
-    #experiencia .timeline-item-premium { padding: 1.2rem; }
 }
 
 /* ==========================================================================
@@ -1123,26 +1032,530 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 /* Los estilos de overflow-wrap ya están incluidos en el breakpoint 479px */
 
 @media (max-width: 360px) {
-    /* Optimizaciones para pantallas ultra-estrechas */
+    /* Solo reglas no duplicadas por Etapas */
     .container { padding: 0 0.8rem; }
     .logo { font-size: 1rem; }
     .nav-controls { gap: 0.6rem; }
+}
 
-    .hero h1 { font-size: 1.6rem; }
-    .hero-badge { font-size: 0.6rem; padding: 3px 8px; text-align: center; max-width: 100%; word-wrap: break-word; }
-    .profile-photo { height: auto; aspect-ratio: 4 / 5; }
-    .photo-card { max-width: 200px; padding: 8px; }
+/* ==========================================================================
+   ETAPA 1: OVERRIDE MOBILE — PROFESIONAL & SIN OVERFLOW
+   Bloque final. Sobreescritura segura para móvil sin afectar desktop.
+   ========================================================================== */
 
-    /* Maximizar área de contenido reduciendo paddings internos */
-    .featured-industrial-content { padding: 1rem; }
-    .mini-card { padding: 0.8rem; }
-    .project-info { padding: 1rem; }
-    #experiencia .timeline-item-premium { padding: 1rem; }
-    .contact-card-premium { padding: 1.5rem 0.8rem; }
+@media (max-width: 767px) {
+    /* Profile Grid: siempre 1 columna en móvil */
+    .profile-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Profile Stats: wrap limpio, sin scroll horizontal */
+    .profile-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .stat-mini-card {
+        flex: 1 1 calc(50% - 0.4rem);
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .stat-mini-card:last-child {
+        flex: 1 1 100%;
+    }
+
+    .stat-mini-card p {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    /* Profile Photo: aspect-ratio consistente, sin height fijo */
+    .profile-photo {
+        height: auto;
+        max-height: 300px;
+        aspect-ratio: 4 / 5;
+    }
+
+    /* Photo Card: no exceder ancho */
+    .photo-card {
+        max-width: 280px;
+        overflow: hidden;
+    }
+
+    /* Bento Grid: sin desbordamiento */
+    .bento-item {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    /* Project Cards: sin desbordamiento */
+    .project-card-premium {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    /* Skill Cluster: sin desbordamiento */
+    .skill-cluster {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    /* Edu Cards: sin desbordamiento */
+    .edu-card-mini {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    /* Featured Industrial: sin desbordamiento */
+    .featured-industrial-card {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    /* Timeline: ajuste limpio */
+    .timeline-container {
+        margin-left: 0;
+    }
+
+    /* Contact: ajuste limpio */
+    .contact-card-premium {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    /* WhatsApp: no tapar contenido crítico */
+    .whatsapp-btn {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 479px) {
+    /* Profile Stats 2+1 en pantallas pequeñas */
+    .stat-mini-card {
+        flex: 1 1 100%;
+    }
+
+    .stat-mini-card:last-child {
+        flex: 1 1 100%;
+    }
+
+    /* Photo Card más compacta */
+    .photo-card {
+        max-width: 240px;
+    }
+
+    .profile-photo {
+        max-height: 260px;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Ultra compacto */
+    .stat-mini-card {
+        padding: 0.8rem;
+    }
+
+    .photo-card {
+        max-width: 200px;
+        padding: 8px;
+    }
+}
+
+/* ==========================================================================
+   ETAPA 2: HERO MÓVIL PREMIUM
+   Optimización exclusiva de la primera sección visible.
+   No afecta desktop/laptop.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    /* --- Hero Container --- */
+    .hero {
+        min-height: auto;
+        padding: 60px 0 16px;
+        align-items: flex-start;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+    }
+
+    .hero-visual {
+        justify-content: center;
+        order: 2;
+    }
+
+    /* --- Badge --- */
+    .hero-badge {
+        font-size: 0.6rem;
+        padding: 5px 14px;
+        letter-spacing: 0.8px;
+        margin-bottom: 1rem;
+        max-width: 90%;
+        text-align: center;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* --- Título Principal --- */
+    .hero h1 {
+        font-size: clamp(1.7rem, 6vw, 2rem);
+        line-height: 1.15;
+        margin-bottom: 1rem;
+        text-wrap: balance;
+        letter-spacing: -0.5px;
+    }
+
+    .text-gradient {
+        background: linear-gradient(90deg, var(--text-main), var(--primary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* --- Párrafo Lead --- */
+    .lead {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        color: var(--text-muted);
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+        text-wrap: pretty;
+    }
+
+    /* --- Botones --- */
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+        border-radius: var(--radius-sm);
+    }
+
+    .btn-secondary {
+        display: inline-block;
+        padding: 0.3rem 0;
+        font-size: 0.85rem;
+        text-align: center;
+    }
+
+    /* --- Experticia Sectorial --- */
+    .hero-trust {
+        border-top: 1px solid var(--border-color);
+        padding-top: 1rem;
+        width: 100%;
+    }
+
+    .trust-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.8px;
+        margin-bottom: 0.6rem;
+    }
+
+    .trust-icons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .trust-item {
+        font-size: 0.75rem;
+        gap: 0.4rem;
+    }
+
+    .trust-item i {
+        font-size: 0.9rem;
+    }
+
+    /* --- Foto Profesional --- */
+    .photo-card {
+        max-width: 220px;
+        padding: 8px;
+        margin: 0 auto;
+    }
+
+    .profile-photo {
+        height: auto;
+        max-height: 275px;
+        aspect-ratio: 4 / 5;
+    }
+
+    .photo-info-badge {
+        padding: 6px 12px;
+        font-size: 0.7rem;
+        bottom: 10px;
+        right: 8px;
+    }
+}
+
+@media (max-width: 479px) {
+    /* --- Hero Ultra Compacto --- */
+    .hero {
+        padding: 55px 0 12px;
+    }
+
+    .hero-badge {
+        font-size: 0.55rem;
+        padding: 4px 10px;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.5rem, 6vw, 1.8rem);
+        margin-bottom: 0.8rem;
+    }
+
+    .lead {
+        font-size: 0.85rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .btn-primary {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .btn-secondary {
+        font-size: 0.8rem;
+    }
+
+    .trust-icons {
+        gap: 0.8rem;
+    }
+
+    .trust-item {
+        font-size: 0.7rem;
+    }
+
+    .photo-card {
+        max-width: 190px;
+        padding: 6px;
+    }
+
+    .profile-photo {
+        max-height: 237px;
+    }
+
+    .photo-info-badge {
+        padding: 5px 8px;
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero {
+        padding: 50px 0 10px;
+    }
+
+    .hero-badge {
+        font-size: 0.5rem;
+        padding: 3px 8px;
+        max-width: 95%;
+    }
+
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .lead {
+        font-size: 0.8rem;
+    }
+
+    .photo-card {
+        max-width: 160px;
+        padding: 5px;
+    }
+
+    .profile-photo {
+        max-height: 200px;
+    }
+}
+
+/* ==========================================================================
+   ETAPA 3: SECCIONES DE CONTENIDO MÓVIL
+   Profesionaliza todas las secciones después del hero.
+   No afecta desktop/laptop.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    /* --- Secciones: Espaciado vertical compacto --- */
+    .section { padding: 32px 0; }
+    .section-title { margin-bottom: 1.5rem; }
+
+    /* --- Perfil Profesional --- */
+    .profile-grid { gap: 1.5rem; }
+    .profile-narrative p { font-size: 0.9rem; line-height: 1.6; }
+    .stat-mini-card { padding: 0.9rem; }
+    .stat-mini-card i { font-size: 1.2rem; margin-bottom: 0.8rem; }
+    .stat-mini-card h4 { font-size: 0.85rem; }
+    .stat-mini-card p { font-size: 0.75rem; line-height: 1.4; }
+
+    /* --- Bento Grid --- */
+    .bento-grid { gap: 1rem; }
+    .bento-item { padding: 1.3rem; }
+    .bento-content i { font-size: 1.6rem; margin-bottom: 0.8rem; }
+    .bento-content h3 { font-size: 1.1rem; margin-bottom: 0.6rem; line-height: 1.3; }
+    .bento-content p { font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem; }
+    .bento-tag { bottom: 1rem; right: 1.3rem; font-size: 0.6rem; }
+
+    /* --- Caso Industrial Destacado --- */
+    .featured-industrial-card { margin-bottom: 1.5rem; }
+    .featured-industrial-content { padding: 1.2rem; }
+    .featured-industrial-content h3 { font-size: 1.3rem; line-height: 1.2; }
+    .featured-description { font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.5; }
+    .featured-mini-grid { gap: 0.8rem; margin-bottom: 1.5rem; }
+    .mini-card { padding: 1rem; }
+    .mini-label { font-size: 0.6rem; margin-bottom: 0.3rem; }
+    .mini-value { font-size: 0.8rem; line-height: 1.5; }
+    .featured-industrial-footer { gap: 0.8rem; }
+    .project-tech { gap: 0.4rem; margin-bottom: 1rem; }
+    .project-tech span { font-size: 0.6rem; padding: 3px 8px; }
+
+    /* --- Proyectos --- */
+    .projects-grid-modern { gap: 1.2rem; }
+    .project-card-premium { border-radius: var(--radius-md); }
+    .project-info { padding: 1.2rem; }
+    .project-info h3 { font-size: 1.1rem; margin-bottom: 0.8rem; }
+    .project-info p { font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.8rem; }
+    .project-links { gap: 0.8rem; padding-top: 0.8rem; }
+    .project-links a { font-size: 0.8rem; padding: 0.4rem 0; }
+
+    /* --- Experiencia --- */
+    .timeline-container { padding-left: 1.2rem; }
+    #experiencia .timeline-item-premium { padding: 1rem; margin-bottom: 1.2rem; }
+    #experiencia .timeline-item-premium h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+    #experiencia .company { font-size: 0.9rem; margin-bottom: 0.8rem; }
+    #experiencia .description { font-size: 0.85rem; line-height: 1.5; }
+    #experiencia .project-tech { gap: 0.3rem; margin-top: 0.8rem; }
+    #experiencia .project-tech span { font-size: 0.6rem; padding: 2px 7px; }
+
+    /* --- Stack Tecnológico --- */
+    .skill-grid { gap: 1rem; }
+    .skill-cluster { padding: 1.2rem; }
+    .skill-cluster h4 { font-size: 0.9rem; margin-bottom: 0.8rem; padding-bottom: 0.6rem; gap: 0.6rem; }
+    .skill-tags { gap: 0.4rem; }
+    .skill-tags span { font-size: 0.7rem; padding: 4px 8px; }
+
+    /* --- Formación Académica --- */
+    #trayectoria .education-stack { gap: 0.8rem; }
+    .edu-card-mini { padding: 1rem; gap: 0.8rem; }
+    .edu-card-mini i { font-size: 1.5rem; }
+    .edu-card-mini h5 { font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .edu-card-mini p { font-size: 0.8rem; line-height: 1.5; }
+    .edu-card-mini .btn-secondary { font-size: 0.8rem; padding: 0.5rem 0; margin-top: 0.5rem; }
+
+    /* --- CTA / Contacto --- */
+    .contact-card-premium { padding: 1.5rem 1rem; }
+    .contact-header h2 { font-size: 1.4rem; line-height: 1.2; margin-bottom: 0.8rem; }
+    .contact-header p { font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.5; }
+    .contact-socials { gap: 0.8rem; padding-top: 1.2rem; }
+    .contact-socials a { font-size: 0.8rem; padding: 0.7rem 1.2rem; max-width: 260px; }
+
+    /* --- Footer --- */
+    footer { padding: 2rem 0 3.5rem; font-size: 0.75rem; }
+
+    /* --- WhatsApp: seguro pero no invasivo --- */
+    .whatsapp-btn { width: 44px; height: 44px; bottom: 12px; right: 12px; font-size: 1.3rem; }
+}
+
+@media (max-width: 479px) {
+    /* --- Secciones ultra compactas --- */
+    .section { padding: 24px 0; }
+    .section-title { font-size: 1.4rem; margin-bottom: 1.2rem; }
+
+    /* --- Perfil --- */
+    .profile-grid { gap: 1.2rem; }
+    .profile-narrative p { font-size: 0.85rem; }
     .stat-mini-card { padding: 0.8rem; }
+    .stat-mini-card h4 { font-size: 0.8rem; }
+    .stat-mini-card p { font-size: 0.7rem; }
+
+    /* --- Bento --- */
+    .bento-item { padding: 1rem; }
+    .bento-content i { font-size: 1.4rem; }
+    .bento-content h3 { font-size: 1rem; }
+    .bento-content p { font-size: 0.8rem; }
+
+    /* --- Featured --- */
+    .featured-industrial-content { padding: 1rem; }
+    .featured-industrial-content h3 { font-size: 1.2rem; }
+    .featured-description { font-size: 0.85rem; }
+    .mini-card { padding: 0.8rem; }
+    .mini-value { font-size: 0.75rem; }
+
+    /* --- Proyectos --- */
+    .project-info { padding: 1rem; }
+    .project-info h3 { font-size: 1rem; }
+    .project-info p { font-size: 0.8rem; }
+    .project-links a { font-size: 0.75rem; }
+
+    /* --- Experiencia --- */
+    .timeline-container { padding-left: 1rem; }
+    #experiencia .timeline-item-premium { padding: 0.8rem; margin-bottom: 1rem; }
+    #experiencia .timeline-item-premium h4 { font-size: 0.9rem; }
+    #experiencia .description { font-size: 0.8rem; }
+
+    /* --- Stack --- */
     .skill-cluster { padding: 1rem; }
+    .skill-cluster h4 { font-size: 0.85rem; }
+    .skill-tags span { font-size: 0.65rem; padding: 3px 7px; }
+
+    /* --- Formación --- */
     .edu-card-mini { padding: 0.8rem; }
-    .bento-item { padding: 1.2rem; }
-    .btn-primary { padding: 0.8rem 1.2rem; font-size: 0.9rem; }
-    footer { padding: 1.2rem 0; font-size: 0.75rem; }
+    .edu-card-mini h5 { font-size: 0.85rem; }
+    .edu-card-mini p { font-size: 0.75rem; }
+
+    /* --- Contacto --- */
+    .contact-card-premium { padding: 1.2rem 0.8rem; }
+    .contact-header h2 { font-size: 1.2rem; }
+    .contact-header p { font-size: 0.85rem; }
+    .contact-socials a { font-size: 0.75rem; padding: 0.6rem 1rem; max-width: 240px; }
+
+    /* --- Footer --- */
+    footer { padding: 1.5rem 0 3rem; }
+}
+
+@media (max-width: 360px) {
+    .section { padding: 20px 0; }
+
+    .bento-item { padding: 0.8rem; }
+    .bento-content h3 { font-size: 0.9rem; }
+    .bento-content p { font-size: 0.75rem; }
+
+    .featured-industrial-content { padding: 0.8rem; }
+    .mini-card { padding: 0.7rem; }
+
+    .project-info { padding: 0.8rem; }
+
+    #experiencia .timeline-item-premium { padding: 0.7rem; }
+
+    .skill-cluster { padding: 0.8rem; }
+
+    .edu-card-mini { padding: 0.7rem; }
+
+    .contact-card-premium { padding: 1rem 0.7rem; }
+
+    footer { padding: 1.2rem 0 2.5rem; }
 }
