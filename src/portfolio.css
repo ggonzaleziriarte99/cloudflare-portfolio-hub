@@ -729,9 +729,8 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     .section-title { margin-bottom: 2rem; font-size: clamp(1.6rem, 5vw, 2rem); }
 
     /* Hero - Compacto y accessible */
-    .hero { min-height: auto; padding: 60px 0 20px; }
+    .hero { min-height: auto; padding: 80px 0 20px; }
     .hero h1 { font-size: 2.2rem; line-height: 1.15; }
-    .hero-badge { margin-bottom: 1rem; }
     .lead { font-size: 1rem; margin-bottom: 2rem; }
     .hero-btns { flex-direction: column; width: 100%; gap: 0.8rem; margin-bottom: 2rem; }
     .btn-primary { width: 100%; text-align: center; padding: 0.9rem 1.5rem; }
@@ -832,7 +831,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     .hero h1 { font-size: 1.8rem; }
     .lead { font-size: 0.9rem; }
     .section-title { font-size: 1.5rem; }
-    .hero-badge { font-size: 0.65rem; padding: 4px 10px; letter-spacing: 0.5px; text-align: center; }
+    .hero-badge { font-size: 0.65rem; padding: 4px 10px; letter-spacing: 0.5px; text-align: center; max-width: 100%; word-wrap: break-word; }
     .container { padding: 0 1rem; }
     .profile-photo { height: 260px; }
     .photo-card { max-width: 240px; }
@@ -1128,7 +1127,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     .nav-controls { gap: 0.6rem; }
 
     .hero h1 { font-size: 1.6rem; }
-    .hero-badge { font-size: 0.6rem; padding: 3px 8px; text-align: center; }
+    .hero-badge { font-size: 0.6rem; padding: 3px 8px; text-align: center; max-width: 100%; word-wrap: break-word; }
     .profile-photo { height: auto; aspect-ratio: 4 / 5; }
     .photo-card { max-width: 200px; padding: 8px; }
 
