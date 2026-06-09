@@ -162,6 +162,7 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 
 .logo { font-weight: 800; font-size: 1.3rem; letter-spacing: -0.5px; color: var(--text-main); }
 .accent-text { color: var(--primary); }
+.accent-text-dark { color: var(--primary-dark); }
 
 .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
 .nav-links a { 
