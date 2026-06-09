@@ -7,10 +7,10 @@ type Feedback = { type: "error" | "warning" | "success"; message: string } | nul
 const FORMSPREE_ACTION = "https://formspree.io/f/TU_ID";
 
 const IMAGES = {
-  profile: "/images/gabriel-gonzalez.svg",
-  churn: "/images/customer-churn.svg",
-  cyber: "/images/cybersecurity-log-analyzer.svg",
-  ecommerce: "/images/ecommerce-portfolio.svg",
+  profile: "/images/gabriel-gonzalez.png",
+  churn: "/images/customer-churn.png",
+  cyber: "/images/cybersecurity-log-analyzer.png",
+  ecommerce: "/images/ecommerce-portfolio.png",
 };
 
 function App() {
