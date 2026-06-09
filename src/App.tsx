@@ -17,7 +17,6 @@ function App() {
   const [theme, setTheme] = useState<Theme>("dark");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [showTop, setShowTop] = useState(false);
   const [sending, setSending] = useState(false);
   const [feedback, setFeedback] = useState<Feedback>(null);
   const formRef = useRef<HTMLFormElement>(null);
@@ -41,7 +40,6 @@ function App() {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
-      setShowTop(window.scrollY > 500);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
@@ -649,12 +647,14 @@ function App() {
       </footer>
 
       <a
-        href="#inicio"
-        className={`back-to-top${showTop ? " show" : ""}`}
-        aria-label="Volver al inicio de la página"
-        title="Volver arriba"
+        href="https://wa.me/56923815675"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-btn"
+        aria-label="Contactar por WhatsApp"
+        title="Contactar por WhatsApp"
       >
-        <i className="fas fa-chevron-up"></i>
+        <i className="fab fa-whatsapp"></i>
       </a>
     </>
   );

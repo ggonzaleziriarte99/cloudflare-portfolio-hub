@@ -559,6 +559,37 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 }
 .back-to-top.show { opacity: 1; pointer-events: all; }
 
+/* WhatsApp Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1000;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    background: #20ba5a;
+}
+
+.whatsapp-btn:focus-visible {
+    outline: 3px solid #25D366;
+    outline-offset: 4px;
+}
+
 /* --- Elevación Premium: Caso Industrial Destacado --- */
 .featured-industrial-card {
     width: 100%;
@@ -775,7 +806,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     footer { padding: 1.5rem 0; font-size: 0.8rem; }
 
     /* Back to top más compacto */
-    .back-to-top { width: 42px; height: 42px; bottom: 20px; right: 20px; }
+    .whatsapp-btn { width: 48px; height: 48px; bottom: 20px; right: 20px; font-size: 1.5rem; }
 }
 
 /* MOBILE SMALL (320px - 479px) */
@@ -833,7 +864,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 }
 
 /* Ajuste de offset para elementos muy redondeados o pequeños */
-.back-to-top:focus-visible,
+.whatsapp-btn:focus-visible,
 .theme-toggle:focus-visible,
 .hamburger:focus-visible {
     outline-offset: 2px;
@@ -1006,7 +1037,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     .hero { min-height: auto !important; padding: 40px 0 !important; }
 
     /* 5. Ocultar elementos interactivos e innecesarios en PDF */
-    .back-to-top, .theme-toggle, .hamburger, .glow-overlay, .data-grid-overlay {
+    .whatsapp-btn, .theme-toggle, .hamburger, .glow-overlay, .data-grid-overlay {
         display: none !important;
     }
 }
