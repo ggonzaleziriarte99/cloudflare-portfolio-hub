@@ -492,11 +492,11 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 }
 
 .contact-header h2 { 
-    font-size: clamp(1.8rem, 4vw, 2.5rem); 
+    font-size: clamp(2rem, 5vw, 2.8rem); 
     margin-bottom: 1.5rem; 
     line-height: 1.2;
 }
-.contact-header p { color: var(--text-muted); margin-bottom: 3.5rem; font-size: 1.1rem; }
+.contact-header p { color: var(--text-muted); margin-bottom: 3.5rem; font-size: 1rem; }
 
 .contact-socials {
     display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
@@ -871,7 +871,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 }
 
 #contacto .contact-header h2 {
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-size: clamp(2rem, 5vw, 2.8rem);
     letter-spacing: -1.5px;
     line-height: 1.1;
     background: linear-gradient(to right, var(--text-main), var(--primary));
@@ -884,7 +884,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 #contacto .contact-header p {
     max-width: 750px;
     margin: 0 auto 3rem;
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: var(--text-muted);
 }
 
@@ -1454,8 +1454,8 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 
     /* --- CTA / Contacto --- */
     .contact-card-premium { padding: 1.5rem 1rem; }
-    .contact-header h2 { font-size: 1.4rem; line-height: 1.2; margin-bottom: 0.8rem; }
-    .contact-header p { font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.5; }
+    .contact-header h2 { font-size: clamp(1.6rem, 5vw, 2rem); line-height: 1.2; margin-bottom: 0.8rem; }
+    .contact-header p { font-size: 0.85rem; margin-bottom: 1.5rem; line-height: 1.5; }
     .contact-socials { gap: 0.8rem; padding-top: 1.2rem; }
     .contact-socials a { font-size: 0.8rem; padding: 0.7rem 1.2rem; max-width: 260px; }
 
@@ -1515,8 +1515,8 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 
     /* --- Contacto --- */
     .contact-card-premium { padding: 1.2rem 0.8rem; }
-    .contact-header h2 { font-size: 1.2rem; }
-    .contact-header p { font-size: 0.85rem; }
+    .contact-header h2 { font-size: 1.4rem; }
+    .contact-header p { font-size: 0.8rem; }
     .contact-socials a { font-size: 0.75rem; padding: 0.6rem 1rem; max-width: 240px; }
 
     /* --- Footer --- */
