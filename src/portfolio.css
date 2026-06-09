@@ -632,6 +632,13 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     margin-bottom: 0.6rem;
 }
 
+.featured-industrial-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
 .mini-value {
     display: block;
     font-size: 0.9rem;

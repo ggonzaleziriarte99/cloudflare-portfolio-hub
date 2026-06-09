@@ -65,7 +65,7 @@ function App() {
       <header id="header" className={`header-premium${scrolled ? " is-scrolled" : ""}`}>
         <nav className="container">
           <div className="logo">
-            GABRIEL<span className="accent-text">GONZÁLEZ</span>.
+            GABRIEL<span className="accent-text">GONZALEZIRIARTE</span>
           </div>
           <ul className={`nav-links${menuOpen ? " active" : ""}`} id="nav-menu" role="list">
             <li><a href="#inicio" onClick={navClick}>Inicio</a></li>
