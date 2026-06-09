@@ -374,7 +374,7 @@ function App() {
                   Diseño e implementación de modelos de datos para análisis de condición de activos integrando
                   fuentes operacionales (SAP, EtaPro, ACS, Kizeo) mediante procesos ETL. Desarrollo de dashboards
                   en Power BI y Python para monitoreo de salud de activos y apoyo a la planificación de
-                  mantenimiento bajo estándar ISO 55001.
+                  mantenimiento bajo estándar ISO 55001 - 50001.
                 </p>
                 <div className="project-tech"><span>Python</span><span>SAP Integration</span><span>Power BI</span><span>ETL</span><span>ISO 55001</span></div>
               </div>
@@ -452,7 +452,7 @@ function App() {
               </div>
               <div className="skill-cluster">
                 <h4><i className="fas fa-tools"></i> Herramientas Complementarias</h4>
-                <div className="skill-tags"><span>Azure</span><span>Windows / Linux / macOS</span><span>AutoCAD (Intermedio)</span><span>Micromine / Leapfrog (Nivel básico)</span><span>ArcView / Vulcan</span></div>
+                <div className="skill-tags"><span>Azure</span><span>Windows / Linux / macOS</span><span>AutoCAD</span><span>Micromine / Leapfrog</span><span>ArcView / Vulcan</span></div>
               </div>
             </div>
           </div>
