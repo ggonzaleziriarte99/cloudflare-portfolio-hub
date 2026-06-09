@@ -729,9 +729,10 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     .section-title { margin-bottom: 2rem; font-size: clamp(1.6rem, 5vw, 2rem); }
 
     /* Hero - Compacto y accessible */
-    .hero { min-height: auto; padding: 80px 0 20px; }
-    .hero h1 { font-size: 2.2rem; line-height: 1.15; }
-    .lead { font-size: 1rem; margin-bottom: 2rem; }
+    .hero { min-height: auto; padding: 70px 0 20px; }
+    .hero h1 { font-size: 1.9rem; line-height: 1.15; }
+    .hero-badge { margin-bottom: 0.8rem; }
+    .lead { font-size: 1rem; margin-bottom: 1.5rem; }
     .hero-btns { flex-direction: column; width: 100%; gap: 0.8rem; margin-bottom: 2rem; }
     .btn-primary { width: 100%; text-align: center; padding: 0.9rem 1.5rem; }
     .btn-secondary { display: inline-block; padding: 0.4rem 0; }
@@ -779,10 +780,11 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     /* Profile */
     .profile-grid { grid-template-columns: 1fr; gap: 2rem; }
     .profile-narrative p { font-size: 0.95rem; }
-    .stat-mini-card { padding: 1.2rem; }
-    .stat-mini-card i { font-size: 1.5rem; }
-    .stat-mini-card h4 { font-size: 1rem; }
-    .stat-mini-card p { font-size: 0.85rem; }
+    .profile-stats { flex-direction: row; gap: 1rem; overflow-x: auto; }
+    .stat-mini-card { padding: 1rem; min-width: 0; flex: 1; }
+    .stat-mini-card i { font-size: 1.3rem; }
+    .stat-mini-card h4 { font-size: 0.9rem; }
+    .stat-mini-card p { font-size: 0.8rem; }
 
     /* Timeline */
     .timeline-container { padding-left: 1.5rem; }
