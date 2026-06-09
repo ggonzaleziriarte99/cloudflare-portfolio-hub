@@ -236,10 +236,6 @@ function App() {
           <div className="container">
             <div className="projects-intro">
               <h2 className="section-title">Soluciones de Datos para Decisiones Críticas</h2>
-              <p className="section-subtitle">
-                Evidencia técnica de integración, automatización y análisis de datos operacionales para la
-                continuidad del negocio.
-              </p>
             </div>
 
             <article className="featured-industrial-card">
