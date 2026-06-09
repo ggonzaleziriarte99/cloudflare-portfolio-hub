@@ -1198,34 +1198,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
         order: 2;
     }
 
-    /* --- Badge --- */
-    .hero-badge {
-        order: -1 !important;
-        display: inline-flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        position: relative !important;
-        z-index: 5;
-        width: auto;
-        max-width: 92%;
-        margin: 0 auto 0.85rem;
-        padding: 5px 10px;
-        font-size: 0.65rem;
-        line-height: 1.35;
-        letter-spacing: 0.5px;
-        white-space: normal;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        color: var(--accent-cyan, #38cbe8);
-        background: var(--primary-glow);
-        border: 1px solid var(--primary);
-        border-radius: 99px;
-        font-weight: 700;
-        text-transform: uppercase;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
+    /* --- Badge → Ver fix definitivo al final del archivo --- */
 
     /* --- Título Principal --- */
     .hero h1 {
@@ -1337,13 +1310,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
         padding: 55px 0 12px;
     }
 
-    .hero-badge {
-        font-size: 0.6rem;
-        padding: 4px 10px;
-        letter-spacing: 0.4px;
-        margin-bottom: 0.8rem;
-        max-width: 95%;
-    }
+    /* Badge → Ver fix definitivo al final del archivo */
 
     .hero h1 {
         font-size: clamp(1.5rem, 6vw, 1.8rem);
@@ -1392,12 +1359,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
         padding: 50px 0 10px;
     }
 
-    .hero-badge {
-        font-size: 0.6rem;
-        padding: 3px 8px;
-        max-width: 98%;
-        letter-spacing: 0.3px;
-    }
+    /* Badge → Ver fix definitivo al final del archivo */
 
     .hero h1 {
         font-size: 1.4rem;
@@ -1582,4 +1544,85 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     .contact-card-premium { padding: 1rem 0.7rem; }
 
     footer { padding: 1.2rem 0 2.5rem; }
+}
+
+/* ==========================================================================
+   HERO BADGE MÓVIL — FIX DEFINITIVO
+   Ubicado al final del archivo para máxima cascada.
+   Solo @media móvil. Desktop intacto.
+   ========================================================================== */
+
+@media (max-width: 767px) {
+    .hero {
+        padding-top: 76px !important;
+    }
+
+    .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .hero-badge {
+        display: inline-flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 10 !important;
+        order: -10 !important;
+        width: fit-content !important;
+        max-width: 94% !important;
+        height: auto !important;
+        min-height: 22px !important;
+        margin: 0 auto 0.9rem !important;
+        padding: 5px 11px !important;
+        font-size: 0.64rem !important;
+        line-height: 1.35 !important;
+        letter-spacing: 0.45px !important;
+        white-space: normal !important;
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-transform: uppercase !important;
+        font-weight: 800 !important;
+        color: #1daec4 !important;
+        background: rgba(56, 203, 232, 0.10) !important;
+        border: 1px solid rgba(56, 203, 232, 0.55) !important;
+        border-radius: 999px !important;
+        box-shadow: 0 8px 22px rgba(56, 203, 232, 0.10) !important;
+        overflow: visible !important;
+    }
+
+    .hero h1 {
+        order: 0 !important;
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 479px) {
+    .hero {
+        padding-top: 72px !important;
+    }
+
+    .hero-badge {
+        max-width: 96% !important;
+        font-size: 0.6rem !important;
+        padding: 4px 9px !important;
+        margin-bottom: 0.8rem !important;
+        letter-spacing: 0.35px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero {
+        padding-top: 70px !important;
+    }
+
+    .hero-badge {
+        max-width: 98% !important;
+        font-size: 0.58rem !important;
+        padding: 4px 8px !important;
+        letter-spacing: 0.25px !important;
+    }
 }
