@@ -102,7 +102,6 @@ function App() {
             <div className="hero-layout">
               <div className="hero-content">
                 <div className="hero-badge">Data Engineer Industrial | BI & Automatización</div>
-                <div style={{ background: 'red', color: '#fff', fontSize: 12, padding: 6, zIndex: 9999, position: 'relative', textAlign: 'center', borderRadius: 4, marginBottom: '0.5rem' }}>VERSION-MOBILE-BADGE-FIX-20260609</div>
                 <h1>
                   Datos industriales e integración para decisiones{" "}
                   <span className="text-gradient">técnicas confiables.</span>

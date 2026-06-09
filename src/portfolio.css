@@ -1554,7 +1554,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 
 @media (max-width: 767px) {
     .hero {
-        padding-top: 76px !important;
+        padding-top: 96px !important;
     }
 
     .hero-content {
@@ -1602,7 +1602,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 
 @media (max-width: 479px) {
     .hero {
-        padding-top: 72px !important;
+        padding-top: 92px !important;
     }
 
     .hero-badge {
@@ -1616,7 +1616,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 
 @media (max-width: 360px) {
     .hero {
-        padding-top: 70px !important;
+        padding-top: 88px !important;
     }
 
     .hero-badge {
