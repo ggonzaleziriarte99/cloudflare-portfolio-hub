@@ -1177,6 +1177,7 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
         min-height: auto;
         padding: 60px 0 16px;
         align-items: flex-start;
+        overflow: visible;
     }
 
     .hero-layout {
@@ -1199,12 +1200,15 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
 
     /* --- Badge --- */
     .hero-badge {
-        font-size: 0.6rem;
+        display: inline-flex;
+        font-size: 0.65rem;
         padding: 5px 14px;
-        letter-spacing: 0.8px;
+        letter-spacing: 0.6px;
         margin-bottom: 1rem;
-        max-width: 90%;
+        max-width: 92%;
         text-align: center;
+        white-space: normal;
+        line-height: 1.35;
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
@@ -1316,10 +1320,11 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     }
 
     .hero-badge {
-        font-size: 0.55rem;
+        font-size: 0.6rem;
         padding: 4px 10px;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.4px;
         margin-bottom: 0.8rem;
+        max-width: 95%;
     }
 
     .hero h1 {
@@ -1370,9 +1375,10 @@ footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid var(--bord
     }
 
     .hero-badge {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
         padding: 3px 8px;
-        max-width: 95%;
+        max-width: 98%;
+        letter-spacing: 0.3px;
     }
 
     .hero h1 {
