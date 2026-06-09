@@ -1,10 +1,7 @@
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useEffect, useState } from "react";
 import "./portfolio.css";
 
 type Theme = "dark" | "light";
-type Feedback = { type: "error" | "warning" | "success"; message: string } | null;
-
-const FORMSPREE_ACTION = "https://formspree.io/f/TU_ID";
 
 const IMAGES = {
   profile: "/images/gabriel-gonzalez.png",
@@ -17,9 +14,6 @@ function App() {
   const [theme, setTheme] = useState<Theme>("dark");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [feedback, setFeedback] = useState<Feedback>(null);
-  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     const saved = (typeof localStorage !== "undefined" && localStorage.getItem("theme")) as Theme | null;
@@ -59,41 +53,6 @@ function App() {
   }, [menuOpen]);
 
   const toggleTheme = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    const form = e.currentTarget;
-    const action = form.getAttribute("action") || "";
-    setFeedback(null);
-
-    if (!action || action.includes("TU_ID")) {
-      e.preventDefault();
-      setFeedback({
-        type: "warning",
-        message:
-          "⚠️ El formulario no está configurado. Reemplaza TU_ID por tu endpoint de Formspree o Power Automate.",
-      });
-      return;
-    }
-
-    if (action.startsWith("https://formspree.io") || action.includes("logic.azure.com")) {
-      e.preventDefault();
-      setSending(true);
-      try {
-        const res = await fetch(action, {
-          method: "POST",
-          body: new FormData(form),
-          headers: { Accept: "application/json" },
-        });
-        if (!res.ok) throw new Error();
-        setFeedback({ type: "success", message: "✅ ¡Mensaje enviado con éxito! Me pondré en contacto pronto." });
-        form.reset();
-      } catch {
-        setFeedback({ type: "error", message: "❌ Hubo un problema al enviar el mensaje. Inténtalo de nuevo." });
-      } finally {
-        setSending(false);
-      }
-    }
-  };
 
   const navClick = () => setMenuOpen(false);
   const year = new Date().getFullYear();
@@ -584,46 +543,6 @@ function App() {
                   técnica.
                 </p>
               </div>
-              <form
-                ref={formRef}
-                id="contact-form"
-                className="modern-form"
-                action={FORMSPREE_ACTION}
-                method="POST"
-                onSubmit={handleSubmit}
-              >
-                <div className="input-row">
-                  <input type="text" name="name" placeholder="Tu Nombre" required />
-                  <input type="email" name="email" placeholder="Tu Email" required />
-                </div>
-                <input type="text" name="subject" placeholder="Asunto de la consulta" required />
-                <textarea
-                  name="message"
-                  placeholder="Cuéntame brevemente el contexto: industria, problema actual, sistemas involucrados, tipo de datos y resultado que necesitas lograr."
-                  rows={4}
-                  required
-                ></textarea>
-                <button type="submit" className="btn-primary full-width" disabled={sending}>
-                  {sending ? (
-                    <>
-                      <i className="fas fa-spinner fa-spin"></i> Enviando...
-                    </>
-                  ) : (
-                    <>
-                      Enviar consulta técnica <i className="fas fa-paper-plane"></i>
-                    </>
-                  )}
-                </button>
-                {feedback && (
-                  <div
-                    aria-live="polite"
-                    className={`feedback-${feedback.type}`}
-                    style={{ marginTop: "1rem", fontWeight: 600 }}
-                  >
-                    {feedback.message}
-                  </div>
-                )}
-              </form>
               <div className="contact-socials">
                 <a href="https://www.linkedin.com/in/ggonzaleziriarte" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-linkedin"></i> LinkedIn
@@ -631,9 +550,6 @@ function App() {
                 <a href="mailto:ggonzaleziriarte99@gmail.com">
                   <i className="fas fa-envelope"></i> ggonzaleziriarte99@gmail.com
                 </a>
-                <span className="location">
-                  <i className="fas fa-map-marker-alt"></i> Vallenar, Atacama, Chile
-                </span>
               </div>
             </div>
           </div>
