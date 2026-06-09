@@ -1,65 +1,19 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import "../portfolio.css";
-import gabrielAsset from "../assets/gabriel-gonzalez.png.asset.json";
-import churnAsset from "../assets/customer-churn.png.asset.json";
-import cyberAsset from "../assets/cybersecurity-log-analyzer.png.asset.json";
-import ecommerceAsset from "../assets/ecommerce-portfolio.png.asset.json";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Gabriel González Iriarte | Data Engineer Industrial | BI & Automatización" },
-      {
-        name: "description",
-        content:
-          "Ingeniero Informático especializado en Minería y Energía. Transformo datos industriales y SAP en información confiable para mantenimiento y gestión de activos.",
-      },
-      {
-        name: "keywords",
-        content:
-          "Data Engineer Industrial, Business Intelligence, Power BI, Python, SAP, Minería, Energía, Mantenimiento Predictivo, Gestión de Activos, SQL, Automatización",
-      },
-      { property: "og:title", content: "Gabriel González Iriarte | Industrial Data Engineer & BI" },
-      {
-        property: "og:description",
-        content:
-          "Arquitectura de datos y automatización para la continuidad operacional en sectores críticos.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { property: "og:image", content: gabrielAsset.url },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Gabriel González Iriarte | Data Engineer Industrial" },
-      {
-        name: "twitter:description",
-        content: "Información confiable para decisiones técnicas en entornos de alta exigencia.",
-      },
-      { name: "twitter:image", content: gabrielAsset.url },
-    ],
-    links: [
-      { rel: "canonical", href: "/" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap",
-      },
-      {
-        rel: "stylesheet",
-        href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
-      },
-    ],
-  }),
-  component: PortfolioPage,
-});
+import "./portfolio.css";
 
 type Theme = "dark" | "light";
 type Feedback = { type: "error" | "warning" | "success"; message: string } | null;
 
 const FORMSPREE_ACTION = "https://formspree.io/f/TU_ID";
 
-function PortfolioPage() {
+const IMAGES = {
+  profile: "/images/gabriel-gonzalez.svg",
+  churn: "/images/customer-churn.svg",
+  cyber: "/images/cybersecurity-log-analyzer.svg",
+  ecommerce: "/images/ecommerce-portfolio.svg",
+};
+
+function App() {
   const [theme, setTheme] = useState<Theme>("dark");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -68,7 +22,6 @@ function PortfolioPage() {
   const [feedback, setFeedback] = useState<Feedback>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
-  // Theme bootstrap
   useEffect(() => {
     const saved = (typeof localStorage !== "undefined" && localStorage.getItem("theme")) as Theme | null;
     const system: Theme =
@@ -82,12 +35,9 @@ function PortfolioPage() {
     document.documentElement.setAttribute("data-theme", theme);
     try {
       localStorage.setItem("theme", theme);
-    } catch {
-      /* ignore */
-    }
+    } catch {}
   }, [theme]);
 
-  // Scroll listeners
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -98,7 +48,6 @@ function PortfolioPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock scroll when menu open + escape closes
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     const onKey = (e: KeyboardEvent) => {
@@ -220,7 +169,7 @@ function PortfolioPage() {
               <div className="hero-visual">
                 <div className="photo-card premium-border">
                   <img
-                    src={gabrielAsset.url}
+                    src={IMAGES.profile}
                     alt="Gabriel González Iriarte - Ingeniero de Datos Industriales y BI"
                     className="profile-photo"
                     decoding="async"
@@ -386,7 +335,7 @@ function PortfolioPage() {
             <div className="projects-grid-modern">
               <article className="project-card-premium">
                 <div className="project-visual">
-                  <img src={churnAsset.url} alt="Dashboard de predicción de abandono de clientes con Machine Learning" loading="lazy" />
+                  <img src={IMAGES.churn} alt="Dashboard de predicción de abandono de clientes con Machine Learning" loading="lazy" />
                 </div>
                 <div className="project-info">
                   <span className="badge">Data Science / ML</span>
@@ -409,7 +358,7 @@ function PortfolioPage() {
 
               <article className="project-card-premium">
                 <div className="project-visual">
-                  <img src={cyberAsset.url} alt="Análisis automatizado de logs de ciberseguridad" loading="lazy" />
+                  <img src={IMAGES.cyber} alt="Análisis automatizado de logs de ciberseguridad" loading="lazy" />
                 </div>
                 <div className="project-info">
                   <span className="badge">Ciberseguridad</span>
@@ -432,7 +381,7 @@ function PortfolioPage() {
 
               <article className="project-card-premium">
                 <div className="project-visual">
-                  <img src={ecommerceAsset.url} alt="Demo de interfaz frontend para comercio electrónico moderno" loading="lazy" />
+                  <img src={IMAGES.ecommerce} alt="Demo de interfaz frontend para comercio electrónico moderno" loading="lazy" />
                 </div>
                 <div className="project-info">
                   <span className="badge">Frontend</span>
@@ -710,3 +659,5 @@ function PortfolioPage() {
     </>
   );
 }
+
+export default App;
