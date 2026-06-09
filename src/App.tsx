@@ -153,7 +153,7 @@ function App() {
                   y dispersos en sistemas de información estructurados y confiables.
                 </p>
                 <p>
-                  Cuento con un sólido dominio en la integración de datos operacionales (SAP, SQL, APIs, Sensores),
+                  Cuento con un sólido dominio en la integración de datos operacionales (SAP, SQL, APIs),
                   desarrollo de flujos ETL y analítica avanzada en Power BI. Mi objetivo es eliminar la
                   incertidumbre técnica mediante la automatización de procesos y la garantía de trazabilidad y
                   calidad (QA/QC) en cada indicador de gestión de activos y mantenimiento.
@@ -432,7 +432,7 @@ function App() {
             <div className="skill-grid">
               <div className="skill-cluster">
                 <h4><i className="fas fa-chart-line"></i> Data, BI & Analytics</h4>
-                <div className="skill-tags"><span>Power BI</span><span>Python</span><span>R (Base sólida)</span><span>SQL Server</span><span>Tableau (Funcional)</span><span>Excel Avanzado</span><span>ETL</span><span>QA/QC de Datos</span><span>Modelamiento</span></div>
+                <div className="skill-tags"><span>Power BI</span><span>Python</span><span>R</span><span>SQL Server</span><span>Tableau (Funcional)</span><span>Excel Avanzado</span><span>ETL</span><span>QA/QC de Datos</span><span>Modelamiento</span></div>
               </div>
               <div className="skill-cluster">
                 <h4><i className="fas fa-industry"></i> Integración & Sistemas</h4>
@@ -440,7 +440,7 @@ function App() {
               </div>
               <div className="skill-cluster">
                 <h4><i className="fas fa-database"></i> Bases de Datos & Gestión</h4>
-                <div className="skill-tags"><span>SQL Server</span><span>Oracle</span><span>MySQL</span><span>PostgreSQL</span><span>MongoDB (Nivel básico)</span><span>Administración DB</span><span>Integridad & Trazabilidad</span></div>
+                <div className="skill-tags"><span>SQL Server</span><span>Oracle</span><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Administración DB</span><span>Integridad & Trazabilidad</span></div>
               </div>
               <div className="skill-cluster">
                 <h4><i className="fas fa-code"></i> Desarrollo & Automatización</h4>
@@ -448,11 +448,11 @@ function App() {
               </div>
               <div className="skill-cluster">
                 <h4><i className="fas fa-shield-alt"></i> Seguridad & Proyectos</h4>
-                <div className="skill-tags"><span>Ciberseguridad</span><span>Análisis de Vulnerabilidades</span><span>Protección de Datos</span><span>PMBOK (Enfoque)</span><span>Scrum / Kanban</span><span>ISO 55001 / 55001</span><span>Trazabilidad Técnica</span></div>
+                <div className="skill-tags"><span>Ciberseguridad</span><span>Análisis de Vulnerabilidades</span><span>Protección de Datos</span><span>PMBOK (Enfoque)</span><span>Scrum / Kanban</span><span>ISO 55001 / 50001</span><span>Trazabilidad Técnica</span></div>
               </div>
               <div className="skill-cluster">
                 <h4><i className="fas fa-tools"></i> Herramientas Complementarias</h4>
-                <div className="skill-tags"><span>Azure</span><span>Windows / Linux / macOS</span><span>AutoCAD (Intermedio)</span><span>Micromine / Leapfrog (Nivel básico)</span><span>ArcView / Vulcan (Conocimiento funcional)</span></div>
+                <div className="skill-tags"><span>Azure</span><span>Windows / Linux / macOS</span><span>AutoCAD (Intermedio)</span><span>Micromine / Leapfrog (Nivel básico)</span><span>ArcView / Vulcan</span></div>
               </div>
             </div>
           </div>
