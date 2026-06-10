@@ -299,9 +299,6 @@ function App() {
                   </p>
                   <div className="project-tech"><span>Python</span><span>Scikit-learn</span><span>Streamlit</span></div>
                   <div className="project-links">
-                    <a href="https://customerchurnproject-kff9bo5z52ugo7ftafqsmx.streamlit.app/" target="_blank" rel="noopener noreferrer">
-                      Demo <i className="fas fa-external-link-alt"></i>
-                    </a>
                     <a href="https://github.com/ggonzaleziriarte99/customer_churn_project" target="_blank" rel="noopener noreferrer">
                       Código <i className="fab fa-github"></i>
                     </a>
@@ -322,9 +319,6 @@ function App() {
                   </p>
                   <div className="project-tech"><span>Python</span><span>Pandas</span><span>Plotly</span></div>
                   <div className="project-links">
-                    <a href="https://cybersecurity-log-analyzer-mfea3u24d6veeammtlpcm7.streamlit.app/" target="_blank" rel="noopener noreferrer">
-                      Demo <i className="fas fa-external-link-alt"></i>
-                    </a>
                     <a href="https://github.com/ggonzaleziriarte99/Cybersecurity-Log-Analyzer" target="_blank" rel="noopener noreferrer">
                       Código <i className="fab fa-github"></i>
                     </a>
