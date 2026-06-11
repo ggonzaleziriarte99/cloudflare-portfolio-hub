@@ -5,8 +5,8 @@ type Theme = "dark" | "light";
 
 const IMAGES = {
   profile: "/images/gabriel-gonzalez.png",
-  churn: "/images/customer-churn.png",
-  cyber: "/images/cybersecurity-log-analyzer.png",
+  churn: "/images/customer-churns.png",
+  cyber: "/images/Cybersecurity Log Analyzers.png",
   ecommerce: "/images/ecommerce-portfolio.png",
 };
 
