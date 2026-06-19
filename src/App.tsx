@@ -358,7 +358,7 @@ function App() {
             <div className="timeline-container">
               <div className="timeline-item-premium">
                 <span className="time">Feb 2024 - Presente</span>
-                <h4>Planificador Predictivo / Data Engineer de Activos</h4>
+                <h4>Programador Predictivo / Data Engineer de Activos</h4>
                 <p className="company">Guacolda Energía SpA / Symmetric</p>
                 <p className="description">
                   Diseño e implementación de modelos de datos para análisis de condición de activos integrando
