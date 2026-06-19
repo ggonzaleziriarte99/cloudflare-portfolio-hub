@@ -371,7 +371,7 @@ function App() {
               <div className="timeline-item-premium">
                 <span className="time">Nov 2023 - Feb 2024</span>
                 <h4>Soporte Planificación / Integración de Datos</h4>
-                <p className="company">Guacolda Energía SpA</p>
+                <p className="company">Guacolda Energía SpA / Symmetric</p>
                 <p className="description">
                   Digitalización de procesos operacionales y captura estructurada de datos en terreno.
                   Implementación de integraciones mediante Python y APIs para conectar sistemas operacionales con
