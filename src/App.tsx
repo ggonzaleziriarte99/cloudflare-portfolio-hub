@@ -357,8 +357,19 @@ function App() {
             <h2 className="section-title">Experiencia Profesional</h2>
             <div className="timeline-container">
               <div className="timeline-item-premium">
-                <span className="time">Feb 2024 - Presente</span>
-                <h4>Programador Predictivo / Data Engineer de Activos</h4>
+                <span className="time">JUN 2026 - Presente</span>
+                <h4>Programador Predictivo</h4>
+                <p className="company">Guacolda Energía SpA / Symmetric</p>
+                <p className="description">
+                  Planificación y programación del mantenimiento predictivo de equipos críticos,
+                  coordinando recursos y actividades para asegurar la confiabilidad, disponibilidad
+                  y continuidad operacional de la planta.
+                </p>
+                <div className="project-tech"><span>Python</span><span>Mantenimiento Predictivo</span><span>Planificación</span></div>
+              </div>
+              <div className="timeline-item-premium">
+                <span className="time">FEB 2024 - JUN 2026</span>
+                <h4>Data Engineer de Activos</h4>
                 <p className="company">Guacolda Energía SpA / Symmetric</p>
                 <p className="description">
                   Diseño e implementación de modelos de datos para análisis de condición de activos integrando
